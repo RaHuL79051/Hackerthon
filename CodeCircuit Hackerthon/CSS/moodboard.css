@@ -1,0 +1,186 @@
+:root {
+  --primary: #2a5c82;
+  --accent: #ff7f50;
+  --secondary: #ff7f50;
+  --light: #f5f7fa;
+  --card-bg: #ffffff;
+  --radius: 14px;
+  --shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+body {
+  font-family: "Segoe UI", system-ui;
+  margin: 0;
+  background: var(--light);
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.dashboard-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(42, 92, 130, 0.1);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+}
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.toolbar {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.sticker-bar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background: var(--light);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+.sticker {
+  font-size: 2rem;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.1s;
+}
+.sticker:active {
+  transform: scale(1.2);
+}
+.moodboard {
+  background: #f8fafc;
+  min-height: 500px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  border: 2px dashed #dbeafe;
+  margin-bottom: 1.5rem;
+}
+.mood-item {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+  transition: box-shadow 0.1s;
+}
+.mood-img {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.11);
+  border: 2px solid #fff;
+  display: block;
+}
+.resize-handle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: -8px;
+  bottom: -8px;
+  background: var(--secondary);
+  border-radius: 50%;
+  cursor: nwse-resize;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.13);
+  border: 2px solid #fff;
+}
+.mood-sticker {
+  font-size: 2.2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.mood-note {
+  background: #fffbe7;
+  color: #7c5e10;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  min-width: 80px;
+  min-height: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border: 1.5px solid #ffe6b0;
+  resize: none;
+}
+.toolbar-btn {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.remove-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 1rem 0.2rem;
+  }
+  .moodboard {
+    min-height: 300px;
+  }
+  .mood-img {
+    max-width: 120px;
+    max-height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .container {
+    width: fit-content;
+  }
+}

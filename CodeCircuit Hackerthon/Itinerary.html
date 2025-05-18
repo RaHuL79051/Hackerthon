@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Itinerary Board - TravelMate Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/itinerary.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🌍 TravelMate Pro</div>
+      <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+    </nav>
+    <div class="container">
+      <h1>🗓️ Trip Itinerary Board</h1>
+      <button class="add-day-btn" onclick="addDay()">+ Add Day</button>
+      <button class="reset-btn" onclick="resetItinerary()">Reset Board</button>
+      <div class="itinerary-board" id="itineraryBoard"></div>
+      <div class="add-activity-form">
+        <h3>Add New Activity</h3>
+        <form id="activityForm">
+          <input
+            type="text"
+            name="title"
+            placeholder="Activity title"
+            required
+          />
+          <input type="time" name="time" required />
+          <textarea name="description" placeholder="Description"></textarea>
+          <select id="daySelect"></select>
+          <button type="submit">Add Activity</button>
+        </form>
+      </div>
+    </div>
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="modalEdit">
+        <h3>Edit Activity</h3>
+        <input
+          type="text"
+          id="editTitle"
+          placeholder="Activity title"
+          required
+        />
+        <input type="time" id="editTime" required />
+        <textarea id="editDesc" placeholder="Description"></textarea>
+        <select id="editDay"></select>
+        <div class="modal-actions">
+          <button class="modal-btn cancel" onclick="closeModal()">
+            Cancel
+          </button>
+          <button class="modal-btn" onclick="saveEditActivity()">Save</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/itinerary.js"></script>
+  </body>
+</html>

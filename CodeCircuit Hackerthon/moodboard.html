@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trip Moodboard - TravelMate Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="css/moodboard.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🌍 TravelMate Pro</div>
+      <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+    </nav>
+
+    <div class="container">
+      <h1>🖼️ Trip Moodboard</h1>
+      <div class="toolbar">
+        <button
+          class="toolbar-btn"
+          onclick="document.getElementById('imgUpload').click()"
+        >
+          📁 Upload Image
+        </button>
+        <input type="file" id="imgUpload" accept="image/*" hidden />
+        <div class="sticker-bar" id="stickerBar">
+          <span>Stickers:</span>
+          <span class="sticker" draggable="true">🌴</span>
+          <span class="sticker" draggable="true">✈️</span>
+          <span class="sticker" draggable="true">🏔️</span>
+          <span class="sticker" draggable="true">🏖️</span>
+          <span class="sticker" draggable="true">🍕</span>
+          <span class="sticker" draggable="true">🎒</span>
+          <span class="sticker" draggable="true">🗺️</span>
+          <span class="sticker" draggable="true">🚗</span>
+          <span class="sticker" draggable="true">📸</span>
+        </div>
+        <button class="toolbar-btn" onclick="addNoteMode()">📝 Add Note</button>
+        <button class="toolbar-btn" onclick="downloadMoodboard()">
+          💾 Download
+        </button>
+      </div>
+      <div class="moodboard" id="moodboard"></div>
+      <div style="text-align: center; color: #888; font-size: 1em">
+        Paste images (Ctrl+V), drag stickers, or upload files.<br />
+        Right-click any item to remove it.
+      </div>
+    </div>
+    <script src="js/moodboard.js"></script>
+  </body>
+</html>

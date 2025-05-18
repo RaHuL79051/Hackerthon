@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap");
+
+:root {
+  --primary: #007bff;
+  --accent: #f97316;
+  --bg: #eef4fa;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --radius: 20px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --glass-blur: blur(16px);
+  --transition: all 0.35s ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background: var(--bg);
+  color: #222;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: white;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logout-btn {
+  background: white;
+  color: var(--primary);
+  padding: 0.55rem 1.4rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  font-size: 1rem;
+}
+.logout-btn:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
+.dashboard-hero {
+  text-align: center;
+  padding: 3.5rem 2rem 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.dashboard-hero::after {
+  content: "🌍";
+  font-size: 160px;
+  opacity: 0.05;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) rotate(25deg);
+  animation: float 8s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(25deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px) rotate(25deg);
+  }
+}
+.dashboard-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.dashboard-hero p {
+  font-size: 1.15rem;
+  color: #f1f6fd;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1.5fr));
+  gap: 2rem;
+  padding: 2rem 6vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-card {
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius);
+  padding: 2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  cursor: pointer;
+  opacity: 0;
+  animation: slideIn 0.6s ease forwards;
+  height: 160px;
+}
+.dashboard-card:nth-child(n) {
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+.dashboard-card:hover {
+  scale: 1.02;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-card:hover {
+  transform: scale(1.035);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  font-size: 2rem;
+  background: radial-gradient(
+    circle at top left,
+    var(--accent),
+    var(--primary)
+  );
+  color: #fff;
+  padding: 0.7rem 0.9rem;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+  transition: var(--transition);
+  transform: rotate(-10deg);
+}
+.dashboard-card:hover .card-icon {
+  transform: rotate(0deg) scale(1.1);
+  background: radial-gradient(
+    circle at bottom right,
+    var(--primary),
+    var(--accent)
+  );
+}
+
+.dashboard-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+.dashboard-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  background: #dde8fc;
+  font-weight: 600;
+  color: #333;
+  margin-top: 2rem;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem 5vw;
+  }
+  .dashboard-hero h1 {
+    font-size: 1.7rem;
+  }
+  .dashboard-hero p {
+    font-size: 1rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+}

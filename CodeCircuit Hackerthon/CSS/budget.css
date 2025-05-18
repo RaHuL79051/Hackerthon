@@ -1,0 +1,203 @@
+:root {
+  --primary: #2a5c82;
+  --secondary: #ff7f50;
+  --light: #f5f7fa;
+  --accent: #ff7f50;
+  --light: #f7faff;
+  --card-bg: #ffffff;
+  --radius: 14px;
+  --shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+body {
+  font-family: "Segoe UI", system-ui;
+  margin: 0;
+  background: var(--light);
+}
+
+.navbar {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.dashboard-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+.people-setup {
+  margin-bottom: 2rem;
+}
+.people-input,
+.name-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.name-label {
+  margin-top: 1rem;
+}
+.payment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.payment-form input,
+.payment-form select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.add-payment-btn {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.reset-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  float: right;
+}
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+.results-table th,
+.results-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+.results-table th {
+  background: var(--light);
+}
+.owed {
+  color: #2ecc71;
+}
+.due {
+  color: #e74c3c;
+}
+.payment-entry {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: var(--light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 0.7rem;
+  margin-left: 0.4rem;
+  cursor: pointer;
+  font-size: 0.95em;
+  width: 100%;
+}
+.edit-btn {
+  background: var(--primary);
+  color: #fff;
+}
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.save-btn {
+  background: var(--secondary);
+  color: #fff;
+}
+.cancel-btn {
+  background: #aaa;
+  color: #fff;
+}
+.who-owes {
+  margin-top: 2.5rem;
+  background: #f8f8fa;
+  border-radius: 10px;
+  padding: 1.2rem;
+  font-size: 1.08rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .contanier {
+    padding: 0;
+    margin: 0;
+  }
+
+  .people-setup input,
+  #nameFields {
+    width: 98%;
+  }
+
+  #peopleCount {
+    width: 96%;
+  }
+
+  .payment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-form input {
+    width: 95%;
+  }
+
+  #payer {
+    width: 100%;
+  }
+
+  .reset-btn {
+    width: 100%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trip Countdown & Planner - TravelMate Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/countdown.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🌍 TravelMate Pro</div>
+      <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+    </nav>
+    <div class="notification-overlay" id="notificationOverlay">
+      <div class="notification-card" id="notificationCard">
+        <h2 id="notifTitle"></h2>
+        <p id="notifMsg"></p>
+        <button class="close-notif-btn" onclick="closeNotification()">
+          Close
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Trip Countdown & Planner</h1>
+      <div class="date-group">
+        <div>
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" />
+        </div>
+        <div>
+          <label for="startTime">Start Time:</label>
+          <input type="time" id="startTime" value="09:00" />
+        </div>
+        <div>
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" />
+        </div>
+      </div>
+      <div class="countdown" id="countdown"></div>
+      <div class="planner-section" id="plannerSection"></div>
+    </div>
+
+    <script src="js/countdown.js"></script>
+  </body>
+</html>

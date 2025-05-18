@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - TravelMate Pro</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Flip.min.js"></script>
+  </head>
+  <body>
+    <main class="login-container">
+      <h2>Login to Your Account</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Username" id="username" required />
+        <input type="password" placeholder="Password" id="password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="flip-card">
+        <div class="flip-card-inner" id="flipCard">
+          <div class="flip-card-front">
+            <p>Click to view login credentials</p>
+          </div>
+          <div class="flip-card-back">
+            <p><strong>Username:</strong> Admin</p>
+            <p><strong>Password:</strong> 1234</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="loginError" style="color: var(--secondary); display: none">
+        Invalid credentials.
+      </p>
+    </main>
+    <script src="js/login.js"></script>
+  </body>
+</html>

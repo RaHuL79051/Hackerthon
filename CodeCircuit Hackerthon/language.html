@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Language Cheat Sheet - TravelMate Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/language.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🌍 TravelMate Pro</div>
+      <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+    </nav>
+    <div class="container">
+      <h1>🌐 Language Translator & Cheat Sheet</h1>
+      <div class="translation-box">
+        <div class="translation-group">
+          <select id="sourceLang">
+            <option value="english">English 🇺🇸</option>
+            <option value="spanish">Spanish 🇪🇸</option>
+            <option value="french">French 🇫🇷</option>
+            <option value="german">German 🇩🇪</option>
+            <option value="hindi">Hindi 🇮🇳</option>
+            <option value="chinese">Chinese 🇨🇳</option>
+            <option value="japanese">Japanese 🇯🇵</option>
+          </select>
+          <select id="targetLang">
+            <option value="spanish">Spanish 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">French 🇫🇷</option>
+            <option value="german">German 🇩🇪</option>
+            <option value="hindi">Hindi 🇮🇳</option>
+            <option value="chinese">Chinese 🇨🇳</option>
+            <option value="japanese">Japanese 🇯🇵</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          class="translation-input"
+          id="inputText"
+          placeholder="Enter text to translate..."
+        />
+        <button onclick="translateText()" class="speak-btn">Translate</button>
+        <div
+          id="translationResult"
+          style="
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+          "
+        ></div>
+        <button
+          onclick="speakTranslation()"
+          class="speak-btn"
+          id="speakBtn"
+          style="display: none"
+        >
+          🔊 Speak Translation
+        </button>
+      </div>
+      <h1>Some Key Words to Get-Go</h1>
+      <div class="selector-group">
+        <select id="langSelect">
+          <option value="spanish">Spanish 🇪🇸</option>
+          <option value="french">French 🇫🇷</option>
+          <option value="german">German 🇩🇪</option>
+          <option value="hindi">Hindi 🇮🇳</option>
+          <option value="chinese">Chinese 🇨🇳</option>
+          <option value="japanese">Japanese 🇯🇵</option>
+        </select>
+        <select id="contextSelect">
+          <option value="general">General</option>
+          <option value="food">Food & Drink</option>
+          <option value="directions">Directions</option>
+          <option value="shopping">Shopping</option>
+          <option value="emergency">Emergency</option>
+        </select>
+      </div>
+      <div class="category-label" id="categoryLabel">General</div>
+      <table class="cheat-table" id="cheatTable"></table>
+    </div>
+    <script src="js/language.js"></script>
+  </body>
+</html>

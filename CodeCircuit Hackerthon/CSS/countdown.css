@@ -1,0 +1,245 @@
+:root {
+  --primary: #2a5c82;
+  --secondary: #ff7f50;
+  --light: #f5f7fa;
+  --text-dark: #333;
+  --accent: #3a99d8;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--text-dark);
+}
+
+.navbar {
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.dashboard-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(42, 92, 130, 0.1);
+  padding: 2.5rem 2rem;
+}
+.back-button-wrapper {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #204864;
+  transform: translateY(-2px);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.date-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.date-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+.date-group input {
+  padding: 0.6rem 1rem;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  min-width: 160px;
+  transition: 0.3s ease;
+}
+
+.date-group input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px rgba(58, 153, 216, 0.3);
+}
+
+.countdown {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 2.5rem;
+  min-height: 2em;
+}
+
+.planner-section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.day-plan {
+  background: var(--light);
+  border-radius: 14px;
+  padding: 1.3rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(42, 92, 130, 0.08);
+}
+
+.day-title {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.note-input {
+  width: 97%;
+  min-height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 0.7rem;
+}
+
+.save-note-btn {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.save-note-btn:hover {
+  background: #ff9972;
+}
+
+.notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  place-items: center;
+  z-index: 1000;
+}
+
+.notification-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 12px 40px rgba(42, 92, 130, 0.2);
+  text-align: center;
+  animation: scaleUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-width: 260px;
+}
+
+.notification-card h2 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.6em;
+}
+
+.notification-card p {
+  color: var(--secondary);
+  font-size: 1.1em;
+  margin-bottom: 1.3em;
+}
+
+.close-notif-btn {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.close-notif-btn:hover {
+  background: #ff9972;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 1rem;
+    max-width: 350px;
+  }
+
+  .notification-card {
+    padding: 1.3rem 1rem;
+  }
+
+  .date-group {
+    flex-direction: column;
+  }
+
+  .date-group input {
+    width: 90%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Destination Explorer - TravelMate Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/destination.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">🌍 TravelMate Pro</div>
+      <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+    </nav>
+
+    <div class="main-content">
+      <h1>Destination Explorer</h1>
+      <div class="filters">
+        <button class="filter-btn active" data-region="All">All</button>
+        <button class="filter-btn" data-region="Europe">Europe</button>
+        <button class="filter-btn" data-region="Asia">Asia</button>
+        <button class="filter-btn" data-region="Americas">Americas</button>
+        <button class="filter-btn" data-region="Africa">Africa</button>
+        <button class="filter-btn" data-region="Oceania">Oceania</button>
+        <input id="searchInput" class="search-bar" placeholder="🔎 Search..." />
+      </div>
+      <div class="dest-grid" id="destGrid"></div>
+    </div>
+
+    <footer class="footer">© 2025 TravelMate Pro</footer>
+
+    <script src="js/destination.js"></script>
+  </body>
+</html>
