@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tripify – Plan Smarter, Travel Better</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts & Font Awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+
+    <!-- Background blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <!-- Header / Hero -->
+    <section class="header" aria-label="Hero section">
+      <div class="logo" aria-label="Tripify logo">
+        <i class="fas fa-plane-departure" aria-hidden="true"></i> Tripify
+      </div>
+      <h1>Plan Smarter, Travel Better</h1>
+      <p>
+        The all-in-one group travel planner for effortless trips.<br />
+        Organize, budget, chat, and explore – all in one place.
+      </p>
+      <div class="cta-btns">
+        <a
+          href="./auth/login.php"
+          class="cta-btn"
+          aria-label="Get started free"
+        >
+          <i class="fas fa-user-plus" aria-hidden="true"></i> Get Started Free
+        </a>
+        <a href="./auth/login.php" class="cta-btn secondary" aria-label="Login">
+          <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Login
+        </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" aria-label="About Tripify">
+      <div class="about-img">
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+          alt="Group of travelers exploring a city"
+          loading="lazy"
+        />
+      </div>
+      <div class="about-content">
+        <h2>Why Tripify?</h2>
+        <p>
+          Tripify was built by travelers, for travelers. We know the hassle of
+          planning group trips: endless chats, lost receipts, confusion over who
+          paid what, and missed must-see sights. Our mission is to make group
+          travel <strong>fun, organized, and stress-free</strong>.
+        </p>
+        <p>
+          With Tripify, you can manage every aspect of your adventure in one
+          beautiful, easy-to-use platform. Whether you’re backpacking with
+          friends, organizing a family vacation, or leading a student trip,
+          Tripify helps you
+          <span style="color: var(--primary); font-weight: 600"
+            >plan smarter and experience more</span
+          >.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" aria-label="Features section">
+      <h1>Our Features</h1>
+      <article
+        class="feature-card"
+        tabindex="0"
+        role="region"
+        aria-labelledby="feature1-title"
+      >
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <h3 id="feature1-title" class="feature-title">Track Location</h3>
+        <p class="feature-desc">
+          Instantly see distances from transport hubs to top destinations. Never
+          get lost again!
+        </p>
+      </article>
+      <article
+        class="feature-card"
+        tabindex="0"
+        role="region"
+        aria-labelledby="feature2-title"
+      >
+        <i class="fas fa-wallet" aria-hidden="true"></i>
+        <h3 id="feature2-title" class="feature-title">Budget Tracker</h3>
+        <p class="feature-desc">
+          Effortlessly split expenses, track spending, and settle up with your
+          group.
+        </p>
+      </article>
+      <article
+        class="feature-card"
+        tabindex="0"
+        role="region"
+        aria-labelledby="feature3-title"
+      >
+        <i class="fas fa-list-check" aria-hidden="true"></i>
+        <h3 id="feature3-title" class="feature-title">To-Do List</h3>
+        <p class="feature-desc">
+          Prioritize must-see spots and activities. Stay organized and make
+          every moment count.
+        </p>
+      </article>
+      <article
+        class="feature-card"
+        tabindex="0"
+        role="region"
+        aria-labelledby="feature4-title"
+      >
+        <i class="fas fa-robot" aria-hidden="true"></i>
+        <h3 id="feature4-title" class="feature-title">Chatbot Assistant</h3>
+        <p class="feature-desc">
+          Get instant travel tips, answers, and personalized help from our smart
+          assistant.
+        </p>
+      </article>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" aria-label="How Tripify Works">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <i class="fas fa-users"></i>
+          <h3>Create Your Group</h3>
+          <p>
+            Start by creating a travel group and inviting your travel buddies.
+          </p>
+        </div>
+        <div class="step">
+          <i class="fas fa-sliders-h"></i>
+          <h3>Plan & Organize</h3>
+          <p>
+            Use our tools to manage itinerary, tasks, and your shared budget.
+          </p>
+        </div>
+        <div class="step">
+          <i class="fas fa-globe"></i>
+          <h3>Travel Smarter</h3>
+          <p>Enjoy your trip while Tripify keeps everything in sync.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <!-- Testimonials -->
+    <section class="testimonials" aria-label="Testimonials">
+      <h2>What Travelers Say</h2>
+      <div class="testimonial-list">
+        <article
+          class="testimonial-card"
+          tabindex="0"
+          role="region"
+          aria-labelledby="testimonial1-name"
+          aria-describedby="testimonial1-quote"
+        >
+          <img
+            src="https://randomuser.me/api/portraits/women/44.jpg"
+            alt="Emily R."
+            class="testimonial-avatar"
+            loading="lazy"
+          />
+          <p id="testimonial1-quote" class="testimonial-quote">
+            “Tripify made our Europe trip a breeze! No more awkward money talks,
+            and we saw everything we wanted. Highly recommend.”
+          </p>
+          <div id="testimonial1-name" class="testimonial-name">Emily R.</div>
+          <div class="testimonial-role">Backpacker</div>
+        </article>
+
+        <article
+          class="testimonial-card"
+          tabindex="0"
+          role="region"
+          aria-labelledby="testimonial2-name"
+          aria-describedby="testimonial2-quote"
+        >
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Siddharth P."
+            class="testimonial-avatar"
+            loading="lazy"
+          />
+          <p id="testimonial2-quote" class="testimonial-quote">
+            “I loved the chatbot and the to-do list. Our group stayed organized
+            and had more fun. The budget tracker is a lifesaver!”
+          </p>
+          <div id="testimonial2-name" class="testimonial-name">
+            Siddharth P.
+          </div>
+          <div class="testimonial-role">Student Traveler</div>
+        </article>
+
+        <article
+          class="testimonial-card"
+          tabindex="0"
+          role="region"
+          aria-labelledby="testimonial3-name"
+          aria-describedby="testimonial3-quote"
+        >
+          <img
+            src="https://randomuser.me/api/portraits/women/65.jpg"
+            alt="Priya M."
+            class="testimonial-avatar"
+            loading="lazy"
+          />
+          <p id="testimonial3-quote" class="testimonial-quote">
+            “Tripify is the only app I trust for planning family vacations.
+            Simple, beautiful, and powerful.”
+          </p>
+          <div id="testimonial3-name" class="testimonial-name">Priya M.</div>
+          <div class="testimonial-role">Family Planner</div>
+        </article>
+
+        <!-- Testimonial 4 -->
+        <article
+          class="testimonial-card"
+          tabindex="0"
+          role="region"
+          aria-labelledby="testimonial4-name"
+          aria-describedby="testimonial4-quote"
+        >
+          <img
+            src="https://randomuser.me/api/portraits/men/54.jpg"
+            alt="Carlos D."
+            class="testimonial-avatar"
+            loading="lazy"
+          />
+          <p id="testimonial4-quote" class="testimonial-quote">
+            “As a solo traveler, Tripify helped me meet my goals while keeping
+            track of every detail. I felt safe and prepared.”
+          </p>
+          <div id="testimonial4-name" class="testimonial-name">Carlos D.</div>
+          <div class="testimonial-role">Solo Explorer</div>
+        </article>
+
+        <!-- Testimonial 5 -->
+        <article
+          class="testimonial-card"
+          tabindex="0"
+          role="region"
+          aria-labelledby="testimonial5-name"
+          aria-describedby="testimonial5-quote"
+        >
+          <img
+            src="https://randomuser.me/api/portraits/women/30.jpg"
+            alt="Ayesha K."
+            class="testimonial-avatar"
+            loading="lazy"
+          />
+          <p id="testimonial5-quote" class="testimonial-quote">
+            “From itinerary suggestions to budget planning, everything was
+            smooth. Our honeymoon was unforgettable thanks to Tripify!”
+          </p>
+          <div id="testimonial5-name" class="testimonial-name">Ayesha K.</div>
+          <div class="testimonial-role">Honeymooner</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <!-- Team Section -->
+    <section class="team" aria-label="Meet the Team">
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <div class="member">
+          <img src="images/rahul.jpg" alt="Rahul Saxena" />
+          <h4>Rahul Saxena</h4>
+          <p>Team Leader & Full Stack Developer</p>
+        </div>
+
+        <div class="member">
+          <img src="images/nisha.jpg" alt="Nisha Kumari" />
+          <h4>Nisha Kumari</h4>
+          <p>Conversational AI Specialist</p>
+        </div>
+
+        <div class="member">
+          <img src="images/atul21.jpg" alt="Atul Pardhi" />
+          <h4>Atul Pardhi</h4>
+          <p>Data Collection & Research Analyst</p>
+        </div>
+
+        <div class="member">
+          <img src="images/laksh1.jpg" alt="Lakshya Pratap Singh" />
+          <h4>Lakshya Pratap Singh</h4>
+          <p>Database Designer & Architect</p>
+        </div>
+
+        <div class="member">
+          <img src="images/anup1.jpg" alt="Anup" />
+          <h4>Anup</h4>
+          <p>UI Developer & Interface Designer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" aria-label="Subscribe to Tripify">
+      <h2>Stay in the Loop</h2>
+      <p>Get travel tips, feature updates, and special offers in your inbox.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-logo" aria-label="Tripify logo">
+        <i class="fas fa-plane-departure" aria-hidden="true"></i> Tripify
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/about.php">About</a>
+        <a href="/contact.php">Contact</a>
+        <a href="/privacy.php">Privacy</a>
+        <a href="/terms.php">Terms</a>
+      </nav>
+      <div class="footer-social" aria-label="Social media links">
+        <a href="#" title="Instagram" aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" title="Twitter" aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="#" title="Facebook" aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+      </div>
+      <div class="footer-copy">&copy; 2025 Tripify. All rights reserved.</div>
+    </footer>
+
+    <script>
+      // Custom Cursor
+      const cursor = document.getElementById("cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      // Enlarge cursor on interactive elements
+      const interactiveElements = [
+        "a",
+        "button",
+        ".cta-btn",
+        ".feature-card",
+        ".testimonial-card",
+      ];
+      interactiveElements.forEach((selector) => {
+        document.querySelectorAll(selector).forEach((el) => {
+          el.addEventListener("mouseenter", () =>
+            cursor.classList.add("active")
+          );
+          el.addEventListener("mouseleave", () =>
+            cursor.classList.remove("active")
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
