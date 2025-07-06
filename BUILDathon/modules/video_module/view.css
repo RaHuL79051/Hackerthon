@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.shorts-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.shorts-card {
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 50%;
+  height: 85%;
+  max-width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-info {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  color: white;
+  z-index: 10;
+  font-size: 0.9rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.username {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.follow-btn {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.caption {
+  margin-top: 4px;
+}
+
+.city-date {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.reel-actions {
+  position: absolute;
+  right: 16px;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  z-index: 10;
+}
+
+.reel-actions .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.reel-actions .icon img {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 4px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.upload-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(255, 65, 108, 0.35);
+  text-decoration: none;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.upload-button:hover {
+  transform: scale(1.1);
+}
+
+/* Optional: Hide scrollbar */
+.shorts-container::-webkit-scrollbar {
+  width: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .video-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .reel-actions {
+    right: 10px;
+    bottom: 80px;
+  }
+}
+
+.reel-actions .like-icon.liked img {
+  filter: invert(19%) sepia(94%) saturate(7497%) hue-rotate(345deg)
+    brightness(95%) contrast(110%);
+}
